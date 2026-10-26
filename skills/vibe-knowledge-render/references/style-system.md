@@ -1,6 +1,6 @@
 # 系列风格与开放表达
 
-读取现行[STYLE_BIBLE](../assets/cinematic-style/STYLE_BIBLE.md)。用户2026-10-21已取消旧三张图及固定三帧确认门槛；旧附件、approved-keyframes和STYLE_APPROVAL仅保留历史，不自动加载为新话题基准。最新要求优先，不从旧图反推内容与构图。
+读取现行[STYLE_BIBLE](../assets/cinematic-style/STYLE_BIBLE.md)。旧三张图及固定三帧确认门槛已经取消；最新要求优先，不从旧图反推内容与构图。
 
 ## 保留辨识，让表达开放
 

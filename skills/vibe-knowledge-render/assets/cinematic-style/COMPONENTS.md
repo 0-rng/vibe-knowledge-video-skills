@@ -1,12 +1,12 @@
 # 组件复用说明
 
-本项目的源代码同时作为三个Vibe技能共享的`assets/cinematic-style`。读取现行STYLE_BIBLE后按需复用；contracts和旧三图仅作历史，不自动加载。人物和场景按当前内容设计，组件不是强制母版。
+本项目的源代码作为四个 Vibe 技能共享的 `assets/cinematic-style`。读取现行 STYLE_BIBLE 后按需复用。人物和场景按当前内容设计，组件不是强制母版。
 
 ## 环境
 
 依赖版本见package.json：Remotion及renderer/bundler/cli均为4.0.536，React/React DOM为18.3.1，TypeScript为5.9.3。当前工作副本复用本地已安装node_modules，没有修改旧视频工程；组件压缩包不包含node_modules。
 
-在新工程中按package.json安装依赖，使用`npm run typecheck`检查。`npm run studio`打开交互预览；按新话题创建或复用适题Composition，不默认渲染旧三图；`npm run demo:historical-keyframes`仅在明确要重看历史组件示范时使用。本机Chrome路径在脚本中显式指定，换机器需确认实际路径，不自动下载浏览器。
+在新工程中按 package.json 安装依赖，使用 `npm run typecheck` 检查。`npm run studio` 打开交互预览；按新话题创建或复用适题 Composition。运行渲染脚本前需确认当前机器的浏览器路径。
 
 当前FontGate加载macOS Songti SC Regular的完整字体名，等待真实字体就绪。包中不附系统字体文件。其他机器需准备契约允许且有合适许可的字体并明确配置同一字族，不静默回退。图像生成只提供无字素材，最终文字由程序绘制。
 
@@ -29,11 +29,8 @@
 
 ## 门槛与检查
 
-`python3 scripts/validate-style-contract.py SHOT_PLAN.json`检查风格和独立场景结构；`--for-full-video`仅保留命令兼容，不再检查固定三帧批准；不得把历史批准当作新任务制作授权。
+`python3 scripts/validate-style-contract.py <当前项目计划.json>` 检查风格和场景结构；`--for-full-video` 仅保留命令兼容，不检查固定三帧批准。
 
-`node scripts/verify-render-state.cjs`用于同帧乱序复渲；优先检查PNG完全一致，若GPU仅产生微小栅格舍入差异，再以像素检查记录（最大通道误差1、全图最多2像素）。该备用检查需要Python/Pillow/NumPy，可用STYLE_QA_PYTHON指定环境；当前使用Codex捆绑Python。不能把这项检查当连续动画观看或声音验收。
+同帧复渲可用于检查确定性；先比较 PNG 完全一致，若 GPU 产生微小栅格舍入差异，再记录像素误差。这项检查不能代替连续动画观看或声音验收。
 
-同一工程已经确认的相同版本不重复询问。完整视频按已选输入与制作授权实现，不新增固定设计图片审批；本包当前只提供三个样式关键帧和可预览的短场景代码，没有整片导出。
-
-
-旧三图、SHOT_PLAN及其批准只作历史；不再要求新片重置keyframeReview或重做固定三帧。新工程填当前内容、事件与规格，并执行阶段独立评审；正式整片仍需用户制作授权与实际动作检查。
+同一工程已经确认的相同版本不重复询问。完整视频按已选输入与制作授权实现，不新增固定设计图片审批；本包提供可预览的短场景组件示例，没有整片导出。新工程填当前内容、事件与规格，并执行阶段独立评审；正式整片仍需用户制作授权与实际动作检查。

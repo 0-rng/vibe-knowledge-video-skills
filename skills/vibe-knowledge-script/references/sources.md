@@ -6,7 +6,6 @@
 
 - [HeyChengC/vibe-knowledge-film](https://github.com/HeyChengC/vibe-knowledge-film)：本次读取版本 `62d51508aad00003dc6209afa80c4b5dc540de59`。有分镜、Canvas绘图、`seek(t)`捕获、分段渲染、确定性检查和事件声音接口。查看 `references/visualization.md`、`references/script.md`、`engine/render.py` 与 `examples/pigeon_B/film.js` 的对应关系，而非只复制外观。
 - [该项目的提示词文件](https://github.com/HeyChengC/vibe-knowledge-film/blob/62d51508aad00003dc6209afa80c4b5dc540de59/references/prompts.md)明确为逆向brief，不能称为爆款原作者提示词。MIT范围排除了部分参考片字幕与画面，具体看LICENSE。其固定时长、版式、阶段审批和声音建议不自动适用于用户任务。
-- [六步制作教程](https://www.douyin.com/video/7692352215482240296)：公开标题与说明涉及资料、编排、素材、样式、分镜和短段检查。本次核实范围是页面可检索说明，不等于完整听看教程。
 
 ## 提示词案例
 

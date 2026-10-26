@@ -23,7 +23,7 @@
 
 ## 仓库内容与来源
 
-`SKILL.md`、`references/` 是四阶段的工作说明；`assets/` 和 `scripts/` 提供第四阶段的组件示例和校验工具。历史风格附件与关键帧仅供追溯，不是新作品的固定模板。本仓库发布的是已安装 Skills 的公开版本，去掉了个人账号设置和本机绝对路径；原始私有设置不随仓库发布。
+`SKILL.md`、`references/` 是四阶段的工作说明；`assets/` 和 `scripts/` 提供第四阶段的组件示例和校验工具。本仓库发布的是已安装 Skills 的公开版本，去掉了个人账号设置、参考视频与本机绝对路径；原始私有设置不随仓库发布。
 
 方法调研和取舍记录在各阶段的 `references/sources.md` 与 `references/director-sources.md`。上游 MIT 声明保存在 `references/upstream-notices/`；被引用的其他项目和素材仍受各自许可约束。本仓库的 MIT 许可只适用于本仓库有权授权的原创内容。
 
