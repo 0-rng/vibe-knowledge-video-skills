@@ -1,0 +1,10 @@
+export const STYLE_VERSION = 'dark-editorial-2.0' as const;
+export const palette = Object.freeze({night:'#090D16',aubergine:'#1C1122',wine:'#25171B',ivory:'#F0E7DC',muted:'#8B8792',coral:'#E7A292',ice:'#81C5E9',gold:'#CFAD7D'});
+export const typography = Object.freeze({serif:'Vibe Songti',sans:'Helvetica Neue',title:70,subtitle:36,label:20,chapter:238});
+export const design = Object.freeze({width:1920,height:1080,fps:30,safeX:144,safeY:104,line:1.15,enterSeconds:0.65,grainOpacity:0.038});
+export type Accent='coral'|'ice'|'gold';
+export type Template='A'|'B'|'C'|'D'|'E'|'F';
+export const clamp=(x:number)=>Math.max(0,Math.min(1,x));
+export const smooth=(x:number)=>{const p=clamp(x);return p*p*(3-2*p);};
+export const phase=(seconds:number,start:number,duration:number)=>smooth((seconds-start)/duration);
+export const seeded=(n:number)=>{const x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x);};

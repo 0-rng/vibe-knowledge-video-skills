@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vibe ② 视觉创意关联内容"
+  short_description: "比较可观察机制，按需出图，独立反驳演绎效果与观赏性后修订"
+  default_prompt: "使用 $vibe-knowledge-visual 基于已选观看轨和STYLE_BIBLE研究视觉机制，按需要展示关键状态图供我选择，并检查知识关联和实现风险。 形成初稿后运行独立子智能体评审，针对演绎效果与观赏性反驳修订；不受旧三张图约束。"

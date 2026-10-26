@@ -1,0 +1,21 @@
+{
+  "name": "vibe-cinematic-style-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "demo:historical-keyframes": "node scripts/render-keyframes.cjs --historical-demo"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.536",
+    "@remotion/renderer": "4.0.536",
+    "@remotion/bundler": "4.0.536",
+    "@remotion/cli": "4.0.536"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

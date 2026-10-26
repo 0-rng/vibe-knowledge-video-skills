@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vibe ① 内容创作发散"
+  short_description: "先联网研究并比较知识发现与事件链，选定后交知识轨和观看轨双轨剧本"
+  default_prompt: "使用 $vibe-knowledge-script 联网研究我的选题，给知识主张、可观看事件链与来源供我选，选定后交知识轨和观看轨双轨剧本。 形成初稿后运行独立子智能体评审，针对演绎效果与观赏性反驳修订；不受旧三张图约束。"

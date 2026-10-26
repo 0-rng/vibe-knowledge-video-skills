@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vibe visual handoff v1",
+  "type": "object",
+  "required": [
+    "project",
+    "shots",
+    "events"
+  ],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": [
+        "id",
+        "topic",
+        "width",
+        "height",
+        "fps",
+        "durationFrames",
+        "lockedText",
+        "scope"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fps": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "durationFrames": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "lockedText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scope": {
+          "enum": [
+            "script",
+            "sample",
+            "full",
+            "shot-edit"
+          ]
+        }
+      }
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "beatId",
+          "candidates",
+          "selected",
+          "reason"
+        ],
+        "properties": {
+          "beatId": {
+            "type": "string"
+          },
+          "candidates": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "mechanism",
+                "firstSight",
+                "expectation",
+                "reveal",
+                "benefit",
+                "risk"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mechanism": {
+                  "type": "string"
+                },
+                "firstSight": {
+                  "type": "string"
+                },
+                "expectation": {
+                  "type": "string"
+                },
+                "reveal": {
+                  "type": "string"
+                },
+                "benefit": {
+                  "type": "string"
+                },
+                "risk": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "selected": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "shots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "beatId",
+          "startFrame",
+          "endFrame",
+          "purpose",
+          "firstFrame",
+          "layers",
+          "expectation",
+          "actions",
+          "camera",
+          "motion",
+          "reveal",
+          "continuity",
+          "implementation",
+          "eventIds"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "beatId": {
+            "type": "string"
+          },
+          "startFrame": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "endFrame": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "firstFrame": {
+            "type": "string"
+          },
+          "expectation": {
+            "type": "string"
+          },
+          "camera": {
+            "type": "string"
+          },
+          "motion": {
+            "type": "string"
+          },
+          "reveal": {
+            "type": "string"
+          },
+          "continuity": {
+            "type": "string"
+          },
+          "implementation": {
+            "type": "string"
+          },
+          "layers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "eventIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "shotId",
+          "frame",
+          "observable",
+          "sound"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "shotId": {
+            "type": "string"
+          },
+          "frame": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "observable": {
+            "type": "string"
+          },
+          "sound": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

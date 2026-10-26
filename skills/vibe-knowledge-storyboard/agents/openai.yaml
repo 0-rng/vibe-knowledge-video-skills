@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vibe ③ 视觉分镜导演"
+  short_description: "导演事件触发、动作、反馈与结果，做无字幕设计测试和连续性计划"
+  default_prompt: "使用 $vibe-knowledge-storyboard 比较已选事件的观看路径，选定后细化事件分镜、无字幕测试与连续验证计划，按需提供图示，并由独立子智能体反驳演绎与观赏性后修订，不设固定三帧门槛。"
